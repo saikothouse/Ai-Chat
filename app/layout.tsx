@@ -1,23 +1,22 @@
-import './globals.css';
+import type { Metadata } from 'next';
+import './globals.css'; // Import your global CSS file
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Chatbot App',
-  description: 'An AI chatbot built with Next.js, Tailwind CSS, and Gemini API',
+  title: 'Gemini AI Chatbot',
+  description: 'AI Chatbot using Gemini API',
 };
 
-export default function Layout({ children }: { children: ReactNode }) {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="p-4 bg-blue-600 text-white">
-        <h1 className="text-xl font-bold">Chatbot App</h1>
-      </header>
-      <main className="flex-grow p-4">
-        {children}
-      </main>
-      <footer className="p-4 bg-gray-800 text-white text-center">
-        &copy; 2024 Chatbot App. All rights reserved.
-      </footer>
-    </div>
+    <html lang="en">
+      <body className="bg-gray-100">
+        <main className="flex flex-col min-h-screen">
+          {children}
+        </main>
+      </body>
+    </html>
   );
-}
+};
+
+export default Layout;
