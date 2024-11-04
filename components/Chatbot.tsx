@@ -60,14 +60,14 @@ const Chatbot: React.FC = () => {
           <div key={index} className={`my-2 flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`flex items-center ${msg.sender === 'user' ? 'ml-2' : 'mr-2'}`}>
               {msg.sender === 'bot' && (
-                <img src="/bot-avatar.png" alt="Bot Avatar" className="w-8 h-8 rounded-full mr-2" />
+                <img src="/companion_17115952.png" alt="Bot Avatar" className="w-8 h-8 rounded-full mr-2" />
               )}
               <div className={`inline-block p-2 rounded-lg ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-800'}`}>
                 {msg.text}
                 <span className="block text-xs text-gray-500">{msg.timestamp}</span>
               </div>
               {msg.sender === 'user' && (
-                <img src="/user-avatar.png" alt="User  Avatar" className="w-8 h-8 rounded-full ml-2" />
+                <img src="/companion_17115952.png" alt="User  Avatar" className="w-8 h-8 rounded-full ml-2" />
               )}
             </div>
           </div>
@@ -75,7 +75,7 @@ const Chatbot: React.FC = () => {
         {loading && (
           <div className="flex justify-start my-2">
             <div className="flex items-center">
-              <img src="/bot-avatar.png" alt="Bot Avatar" className="w-8 h-8 rounded-full mr-2" />
+              <img src="/companion_17115952.png" alt="Bot Avatar" className="w-8 h-8 rounded-full mr-2" />
               <div className="inline-block p-2 bg-gray-300 text-gray-800 rounded-lg">
                 <div className="flex items-center">
                   <div className="loader"></div>
