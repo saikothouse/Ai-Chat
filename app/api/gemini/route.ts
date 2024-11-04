@@ -4,7 +4,7 @@ export async function POST(req: Request) {
   const { message } = await req.json();
 
   const API_KEY = process.env.GEMINI_API_KEY; // Store your API key in .env.local
-  const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
 
   try {
     const response = await fetch(API_URL, {
